@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/* printing: loaded after landing.css, for print only. The text sits in a
+   column on the left and the sidenotes in the margin to its right. */
+
+@page {
+    margin: 2cm 1.8cm;
+}
+
+html {
+    font-size: 11pt;
+}
+
+body {
+    color: #000;
+}
+
+#contentContainer {
+    width: auto;
+    max-width: none;
+    margin: 0 5.6cm 0 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 22pt;
+    border-bottom-color: #000;
+}
+
+h2 {
+    font-size: 11pt;
+}
+
+h1, h2, .divider {
+    break-after: avoid;
+}
+
+p {
+    orphans: 2;
+    widows: 2;
+}
+
+li {
+    break-inside: avoid;
+}
+
+/* notes always show, whether or not they were open on screen */
+.sidenote,
+.sidenote-toggle:checked + .sidenote-ref + .sidenote {
+    display: block;
+    position: relative;
+    left: auto;
+    right: auto;
+    z-index: auto;
+    float: right;
+    clear: right;
+    width: 4.8cm;
+    margin: 0.2em -5.6cm 0.8em 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    break-inside: avoid;
+}
+
+.sidenote::before {
+    right: 100%;
+    left: auto;
+    top: -0.45em;
+    padding-right: 0.3em;
+}
+
+.sidenote-toggle:checked + .sidenote-ref::after {
+    background: none;
+    color: inherit;
+}
+
+a,
+a:hover {
+    background: none;
+    color: inherit;
+}

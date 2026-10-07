@@ -1,0 +1,340 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Vollkorn';
+    src: url('../font/vollkorn/Vollkorn-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vollkorn';
+    src: url('../font/vollkorn/Vollkorn-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vollkorn';
+    src: url('../font/vollkorn/Vollkorn-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vollkorn';
+    src: url('../font/vollkorn/Vollkorn-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vollkorn';
+    src: url('../font/vollkorn/Vollkorn-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Vollkorn', serif;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum";
+    font-weight: 400;
+    color: #1d1d1d;
+    hyphens: auto;
+    /* only split words of 10+ letters, 4+ on each side, never two lines running */
+    hyphenate-limit-chars: 10 4 4;
+    hyphenate-limit-lines: 1;
+}
+
+/* no hyphenation in headings, the byline, or web addresses */
+h1, h2, .byline, code {
+    hyphens: manual;
+}
+
+/* browsers reset the numeral style on list numbers, so set it again */
+::marker {
+    font-variant-numeric: lining-nums;
+}
+
+#contentContainer {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 650px;
+    padding: 10px 2% 5rem;
+}
+
+h1, h2 {
+    font-style: italic;
+    padding-top: 1em;
+}
+
+h1 {
+    font-size: 35px;
+    line-height: .9em;
+    padding-bottom: 0;
+    border-bottom: 1.7px solid #1d1d1d;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+/* the byline tucks under the title's rule, at the size of the sidenotes */
+h1:has(+ .byline) {
+    margin-bottom: 0;
+}
+
+.byline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0.35rem 0 1.6rem;
+    font-size: 70%;
+    line-height: 1.35;
+    text-align: left;
+}
+
+.byline .author {
+    font-size: 0.85rem;
+}
+
+/* a divider is the text -.- which Vollkorn draws as an ornament when
+   discretionary ligatures are on; being text, it can still be copied */
+.divider {
+    margin: 0.5em 0 -.4em;
+    text-align: center;
+    font-feature-settings: "dlig";
+}
+
+body {
+    counter-reset: sidenote;
+}
+
+.sidenote-ref {
+    counter-increment: sidenote;
+}
+
+.sidenote-ref::after,
+.sidenote::before {
+    content: counter(sidenote);
+    font-size: 70%;
+    font-weight: 600;
+    line-height: 0;
+    vertical-align: super;
+}
+
+/* hang the number outside the note so the note text stays flush left;
+   it sits on the note's first line, raised like the marker in the text */
+.sidenote::before {
+    position: absolute;
+    right: 100%;
+    top: -0.45em;
+    padding-right: 0.3em;
+    line-height: calc(1.35 / 0.7);
+    vertical-align: baseline;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.sidenote-toggle {
+    display: none;
+}
+
+.sidenote-ref {
+    cursor: pointer;
+}
+
+.sidenote {
+    display: none;
+    position: relative;
+    font-size: 70%;
+    line-height: 1.35;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+/* narrow screens: tapping a number opens its note in a box over the text,
+   just below the line the number is on; tapping again closes it */
+@media (max-width: 1199.98px) {
+    p {
+        position: relative;
+    }
+
+    /* the number of an open note is inverted */
+    .sidenote-toggle:checked + .sidenote-ref::after {
+        background: #1d1d1d;
+        color: #fff;
+    }
+
+    .sidenote-toggle:checked + .sidenote-ref + .sidenote {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        margin: 0.3em 1.5em 0em 1.5em;
+        padding: 0.7em 1em 0.7em 1.4em;
+        background: #fff;
+
+        border: 1px solid #1d1d1d;
+    }
+
+    .sidenote::before {
+        right: auto;
+        left: 0.9em;
+        top: 0.55em;
+        padding-right: 0;
+    }
+}
+
+/* phones: smaller text, no gap above the title */
+@media (max-width: 500px) {
+    html {
+        font-size: 17px;
+    }
+
+    h1 {
+        margin-top: 0;
+        padding-top: 0;
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+}
+
+/* wide screens: notes always show, out in the right margin */
+@media (min-width: 1200px) {
+    .sidenote-ref {
+        cursor: auto;
+    }
+
+    .sidenote {
+        display: block;
+        float: right;
+        clear: right;
+        width: 220px;
+        margin: 0.2em -260px 0.8em 0;
+    }
+}
+
+ul {
+    padding-left: 1em;
+    list-style: none;
+}
+
+ol {
+    padding-left: 1.4em;
+}
+
+li {
+    position: relative;
+    margin: 1em 0;
+    text-align: left;
+}
+
+li > p {
+    margin: 0;
+}
+
+/* the dash sits in the list's indent so wrapped lines stay flush */
+ul > li::before {
+    content: "-";
+    position: absolute;
+    right: 100%;
+    padding-right: 0.3em;
+}
+
+/* a list of posts: title, then author and date, then a one-line summary */
+h2:has(+ ul.posts) {
+    margin-bottom: 0.5em;
+}
+
+ul.posts {
+    margin-top: 0;
+}
+
+ul.posts > li {
+    margin: 1.2em 0;
+}
+
+ul.posts > li:first-child {
+    margin-top: 0;
+}
+
+.post-title {
+    font-style: italic;
+}
+
+.post-meta {
+    display: block;
+    margin-top: 0.15em;
+    font-size: 70%;
+    line-height: 1.35;
+}
+
+.post-tldr {
+    margin: 0.3em 0 0;
+    font-size: 85%;
+    line-height: 1.4;
+}
+
+code {
+    font-family: monospace;
+    font-size: 85%;
+    overflow-wrap: anywhere;
+}
+
+a {
+    color: inherit;
+    text-underline-offset: 2px;
+}
+
+a:hover {
+    background: #1d1d1d;
+    color: #fff;
+}
+
+.menu {
+    padding-bottom: 5px;
+}
+
+.menu a {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.menu a:hover {
+    font-style: italic;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+#nameSmall {
+    float: right;
+    width: auto;
+    height: 5em;
+}
+
+@media (min-width: 600px) {
+    #contentContainer {
+        padding-top: 20px;
+    }
+}
