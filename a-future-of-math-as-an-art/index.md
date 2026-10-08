@@ -20,8 +20,7 @@ Mathematics is currently placed alongside science, technology, and engineering i
 We have happily accepted, or even promoted, this positioning, and in exchange, we enjoy a relatively high status in the academic hierarchy.
 
 Now, the entanglement of math with these disciplines has become an existential risk to the discipline.
-It is a real possibility that AI systems will soon produce and communicate mathematical ideas better than any human can.
-If this comes to be, it seems broader society has little incentive not to automate the role of mathematics in the pipeline of technological progress.
+It is a real possibility that AI systems will soon produce and communicate mathematical ideas better than any human can, and if this comes to be, it seems broader society has little incentive not to automate the role of mathematics in the pipeline of technological progress.
 
 We are already seeing hints of such a future.
 In recent months, AI systems have become powerful enough that the community is facing an influx of solutions to problems that human mathematicians had spent substantial effort on.
@@ -62,13 +61,12 @@ This brought about a period of despair.
 Much of my sense of purpose had been tied to developing new ideas in the service of scientific progress, but future contributions I could envision, like pointing the AI in new directions, or developing "human understanding", all felt meaningless in the face of powerful AI.
 
 As I sat with this sadness, I began to reflect on how and why I do math.
-For years, the getting an academic job was my main goal, so I had mostly considered these things in relation to the existing institutional structures.
-This time, though, having secured a job, and armed with the knowledge that all academic norms are flux, I had the freedom to explore my relationship with math from a new perspective.
-In doing so, I came to understand something central to why I do mathematics: *mathematics provides me a way to explore the human condition.*
+For years, getting an academic job was my main goal, so I had mostly considered these questions in relation to existing institutional structures.
+This time, though, having secured a job, and armed with the knowledge that all academic norms are flux, I felt free to explore my relationship with math from a new perspective, and in doing so I came to understand something central to why I do mathematics: *mathematics provides me a way to explore the human condition.*
 
 
 Math is a collaborative endeavor.
-In some ways, this is obvious; any institution operating at the scale of mathematics research consists of the collective efforts of many people, each playing some role in advancing the enterprise.
+In some ways, this is obvious; any institution operating at the scale of research mathematics consists of the collective efforts of many people, each playing some role in advancing the enterprise.
 Yet, as William Thurston observes,[^thurston] the way we organize our efforts suggests that "the social setting is extremely important" to why and how most of us do math.
 We like having "colleagues who share [our] excitement", and choose what we work on based on human factors, not solely the pursuit of new knowledge and theorems.
 In other words, part of why we do math is human connection.
@@ -80,7 +78,7 @@ I work with collaborators not just because they have knowledge that I can benefi
 I share ideas with friends, not just because I think they will benefit from them, but also because I know they will enjoy hearing them and that their response will teach me more about how they see the world.
 I go to conferences not just to watch presentations and learn theorems,[^slides] 
 but also to experience the wonder of participating in a large community.
-And, I teach not just to help students understand mathematical concepts and tools, but also to share with them the excitement, fear, hope, and joy of this formative time of their lives.
+And, I teach, not just to help students understand mathematical concepts and tools, but also to share with them the excitement, fear, hope, and joy of this formative time of their lives.
 In all of these ways, I understand better my place in the world.
 
 [^slides]: I actually don't like this part very much. But I need it for the rhetorical device. 
@@ -94,7 +92,7 @@ In other words, as Francis Su writes, "doing mathematics cultivates virtues that
 
 [^su-flourishing]: [*Mathematics for Human Flourishing*](https://francissu.substack.com/p/mathematics-for-human-flourishing). Francis Su. 2017.
 
-For me, the most important way math does this is by serving as the context for creative expression.[^meta]
+For me, the most important way math helps me flourish is by serving as the context for creative expression.[^meta]
 As I try to figure out what I want to convey and to whom, why I'm even doing this, and how to turn vision to reality, I gain insight into my own state of being and the state of the world around me.
 In doing so, I am connected to the present moment and to an envisioned future in which I might exist.
 Likewise, when I finally get something "just right", a sentence or figure in a paper, the arrangement of a talk, or the organization of an idea, I feel a sense of satisfaction and exhilaration that I carry with me into the world.
@@ -104,8 +102,9 @@ It is the entire process, not just the end result, that provides value.
 
 As I came to understand my motivations for doing math better, I began to develop a sense of optimism about my future in mathematics.
 I realized what I actually cared about was contributing to the wellbeing of humanity, and that I'd lost track of the distinction through years of working in a discipline close to application.
+Thus, even in the case that "math-as-a-science" is fully automated, perhaps I could still do math.
 
-I began to imagine a future for human-centered math that I would be excited to participate in.
+As I realize this, I began to imagine a future for human-centered math that I would be excited to participate in.
 A future in which math is organized under the umbrella of what might be called the *mathematical arts*: mathematical pursuits centered in ideals such as "creative expression, storytelling, and cultural participation",[^the-arts] rather than technological progress.
 A future in which these ideals are understood and valued across all facets of society, and in which math is viewed as essential to the human experience.
 
@@ -131,18 +130,16 @@ This essay originated as part of my own attempt to to gain such perspective, and
 
 
 The arts and humanities struggle financially, and admittedly, positioning math alongside these disciplines exposes us to the same risk.
-However, maintaining the status quo does not mean that we will avoid this struggle; even if AI stops improving today and "math-as-a-science" is never automated, the role of humans in the program will change substantially. 
+However, maintaining the status quo does not mean that we will avoid this struggle; even if AI stops improving today and "math-as-a-science" is never automated, the role of humans in the process will change substantially. 
 It seems to me that, unless we clearly lay out the value of math outside of this program, we will remain beholden to the current system and its misguided emphasis on technological progress and economic value.
 
 Yet, as much as the current moment is a challenge, it is a chance to shape the future of our discipline and of society.
 The same factors threatening the future of math are impacting many other professions, and our current struggle has become a flashpoint in the broader struggle for our collective futures.
 This is both a strategic opportunity and a moral obligation. 
-We already enjoy broad public support, and the concept of "math-as-an-art" is easier to understand than many other explanations of the value of math.[^easy]
+We already enjoy broad public support, and the concept of "math-as-an-art" is easier to understand than many other explanations of the value of math,[^easy] making such a transition more palatable to the general public. 
 At the same time, our discipline commands a certain level of respect in society,[^respect] and we should use this to advocate for the rejuvenation of human-centered pursuits at large.
 
-Our struggle is inextricably linked to that of the delivery rider and barista, the line cook and social worker, the taxi driver and farmer, and indeed of all workers alike.
 Therefore, as we fight to define the future of our discipline, let us join the chorus of voices calling out for a renewed focus on the dignity and well-being of humans and humanity.
-
 Math as we knew it is gone, but math as it will be known is just beginning.
 
 [^easy]: Especially compared to narrower/more specific justifications like "human understanding".
